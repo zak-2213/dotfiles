@@ -1,0 +1,5 @@
+alias venv="source .venv/bin/activate"
+alias ai="/home/z/claude-frontend/run.sh"
+alias screenshot="hyprshot -m window"
+alias update="./.config/ml4w/scripts/installupdates.sh"
+alias fix_wifi="sudo dmesg | grep -i network; sudo systemctl restart NetworkManager"
