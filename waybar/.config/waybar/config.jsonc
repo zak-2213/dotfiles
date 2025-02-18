@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray", "temperature", "hyprland/window"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/updates","network","backlight","pulseaudio","clock", "battery","custom/power"],
+	"modules-right": ["custom/updates","network","backlight","pulseaudio","clock", "battery"],
 	
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -108,7 +108,7 @@
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
         "interval": 15,
-        "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
+        "on-click": "ghostty -e paru -Syu && notify-send 'The system has been updated' "
     },
     "custom/wallpaper":{
         "format":" ",
