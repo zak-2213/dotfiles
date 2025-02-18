@@ -31,6 +31,16 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       commit_icon = '@'
       fetch_status = true
 
+    [[blocks.segments]]
+    type = "python"
+    style = "plain"
+    template = " ({{ .Venv }})"
+    foreground = "green"
+    background = "transparent"
+    [blocks.segments.properties]
+      display_mode = "environment"
+      fetch_virtual_env = true
+
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
