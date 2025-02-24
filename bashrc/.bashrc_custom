@@ -2,3 +2,4 @@ alias venv="source .venv/bin/activate"
 alias ai="/home/z/claude-frontend/run.sh"
 alias screenshot="hyprshot -m window"
 eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/EDM115-newline.omp.json)"
+DISPLAY="" neofetch
