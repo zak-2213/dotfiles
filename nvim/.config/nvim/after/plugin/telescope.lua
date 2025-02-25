@@ -1,6 +1,6 @@
-local builtin=require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>pf', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ps', function() 
-	builtin.grep({ search=vim.fn.input("Grep > ")} );
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>pf", builtin.git_files, {})
+vim.keymap.set("n", "<leader>ps", function()
+	builtin.grep({ search = vim.fn.input("ripgrep > ") })
 end)
