@@ -1,0 +1,7 @@
+vim.keymap.set("n", "<leader>aa", vim.cmd.ArduinoAttach)
+vim.keymap.set("n", "<leader>av", vim.cmd.ArduinoVerify)
+vim.keymap.set("n", "<leader>au", vim.cmd.ArduinoUpload)
+vim.keymap.set("n", "<leader>aus", vim.cmd.ArduinoUploadAndSerial)
+vim.keymap.set("n", "<leader>as", vim.cmd.ArduinoSerial)
+vim.keymap.set("n", "<leader>ab", vim.cmd.ArduinoChooseBoard)
+vim.keymap.set("n", "<leader>ap", vim.cmd.ArduinoChooseProgrammer)
