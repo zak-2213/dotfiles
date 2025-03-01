@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["claude.vim"] = {
-    loaded = true,
-    path = "/home/zak/.local/share/nvim/site/pack/packer/start/claude.vim",
-    url = "https://github.com/pasky/claude.vim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -93,6 +88,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["codecompanion.nvim"] = {
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18codecompanion\frequire\0" },
+    loaded = true,
+    path = "/home/zak/.local/share/nvim/site/pack/packer/start/codecompanion.nvim",
+    url = "https://github.com/olimorris/codecompanion.nvim"
   },
   ["conform.nvim"] = {
     loaded = true,
@@ -123,6 +124,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/zak/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
@@ -163,6 +169,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/zak/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   oceanic = {
     loaded = true,
@@ -227,6 +239,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: codecompanion.nvim
+time([[Config for codecompanion.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18codecompanion\frequire\0", "config", "codecompanion.nvim")
+time([[Config for codecompanion.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

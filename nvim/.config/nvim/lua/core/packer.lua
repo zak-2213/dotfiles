@@ -11,7 +11,6 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
 		-- or                            , branch = '0.1.x',
-		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use({ "rose-pine/neovim", as = "rose-pine" })
 	use({ "mhartington/oceanic-next", as = "oceanic" })
@@ -41,9 +40,18 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 	use("stevearc/vim-arduino")
 	use("vhda/verilog_systemverilog.vim")
-	use("pasky/claude.vim")
 	use("EdenEast/nightfox.nvim")
 	use("folke/tokyonight.nvim")
 	use("aliqyan-21/darkvoid.nvim")
 	use({ "iamcco/markdown-preview.nvim" })
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
+	use({
+		"olimorris/codecompanion.nvim",
+		config = function()
+			require("codecompanion").setup()
+		end,
+	})
 end)
