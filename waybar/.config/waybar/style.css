@@ -49,9 +49,9 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-	color: #ABE9B3;
+	color: #ffffff;
     background: rgba(171, 233, 179, 0.2);
-    border: 1px solid #ABE9B3;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 0 6px;
     margin: 0 2px;
@@ -75,8 +75,8 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #bd93f9;
+	background: #161320;
+	color: #bd93f9;
 }
 
 #pulseaudio {
@@ -87,8 +87,8 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #1A1826;
-	background: #FAE3B0;
+	background: #1A1826;
+	color: #FAE3B0;
 }
 
 #battery {
@@ -100,18 +100,18 @@ window#waybar.hidden {
 	margin-right: 8px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #B5E8E0;
+	background: #161320;
+	color: #B5E8E0;
 }
 
 #battery.charging, #battery.plugged {
-	color: #161320;
-    background-color: #B5E8E0;
+	background-color: #161320;
+    color: #B5E8E0;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #B5E8E0;
-    color: #161320;
+    color: #B5E8E0;
+    background-color: #161320;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -121,8 +121,8 @@ window#waybar.hidden {
 
 @keyframes blink {
     to {
-        background-color: #BF616A;
-        color: #B5E8E0;
+        color: #BF616A;
+        background-color: #B5E8E0;
     }
 }
 
@@ -134,8 +134,8 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #F8BD96;
+	background: #161320;
+	color: #F8BD96;
 }
 #clock {
 	margin-top: 6px;
@@ -145,8 +145,8 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #ABE9B3;
+	background: #161320;
+	color: #ABE9B3;
 	/*background: #1A1826;*/
 }
 
@@ -158,8 +158,8 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #ABE9B3;
+	background: #161320;
+	color: #ABE9B3;
 	/*background: #1A1826;*/
 }
 
@@ -171,8 +171,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #DDB6F2;
+	background: #161320;
+	color: #DDB6F2;
 }
 #cpu {
 	margin-top: 6px;
@@ -182,8 +182,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #96CDFB;
+	background: #161320;
+	color: #96CDFB;
 }
 
 #temperature {
@@ -194,8 +194,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #C9CBFF;
+	background: #161320;
+	color: #C9CBFF;
 }
 
 #tray {
