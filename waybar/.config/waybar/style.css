@@ -76,7 +76,7 @@ window#waybar.hidden {
 	border-radius: 10px;
 	transition: none;
 	background: #161320;
-	color: #bd93f9;
+	color: #dfcafd;
 }
 
 #pulseaudio {
@@ -135,7 +135,7 @@ window#waybar.hidden {
 	border-radius: 10px;
 	transition: none;
 	background: #161320;
-	color: #F8BD96;
+	color: #ffd9c0;
 }
 #clock {
 	margin-top: 6px;

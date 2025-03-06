@@ -2,8 +2,8 @@ vim.api.nvim_set_keymap("n", "<C-e>", "<C-e>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-y>", "<C-y>", { noremap = true })
 
 vim.keymap.set("n", "<C-q>", vim.cmd.Ex)
-vim.keymap.set("n", "<C-w>", ":set wrap!<CR>")
-vim.keymap.set("n", "<C-S-s>", vim.cmd.vsplit)
+vim.keymap.set("n", "<C-Tab>", ":set wrap!<CR>")
+vim.keymap.set("n", "<C-k>", vim.cmd.vsplit)
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")

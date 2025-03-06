@@ -19,3 +19,4 @@ fi
 if [ -f ~/.bashrc_secret ]; then
     source ~/.bashrc_secret
 fi
+. "$HOME/.cargo/env"

@@ -1,5 +1,6 @@
 alias venv="source .venv/bin/activate"
 alias ai="/home/z/chat-ai-frontend/run.sh"
 alias screenshot="hyprshot -m window"
+alias build_docs="mkdocs build; python -m http.server --directory ./site"
 eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/EDM115-newline.omp.json)"
 DISPLAY="" neofetch

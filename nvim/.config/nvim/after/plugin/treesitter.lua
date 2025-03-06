@@ -9,7 +9,6 @@ require("nvim-treesitter.configs").setup({
 		"cpp",
 		"cuda",
 		"lua",
-		"fortran",
 		"markdown",
 		"markdown_inline",
 		"python",
