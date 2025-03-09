@@ -16,6 +16,12 @@
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
+      "shift-alt-k": "editor::AddSelectionAbove", // Insert Cursor Above
+      "shift-alt-j": "editor::AddSelectionBelow", // Insert Cursor Below
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "ctrl-alt-shift-k": "editor::DuplicateLineUp",
+      "ctrl-alt-shift-j": "editor::DuplicateLineDown",
     }
   }
 ]
