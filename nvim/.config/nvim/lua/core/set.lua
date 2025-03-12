@@ -37,3 +37,10 @@ vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 		vim.diagnostic.open_float(nil, { focus = false })
 	end,
 })
+
+vim.api.nvim_create_autocmd({ "BufNewFile" }, {
+	pattern = "*.ino",
+	callback = function()
+		vim.cmd("0r " .. vim.fn.stdpath("config") .. "/templates/skeleton.ino")
+	end,
+})

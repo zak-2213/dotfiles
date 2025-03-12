@@ -21,7 +21,14 @@
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
       "ctrl-alt-shift-k": "editor::DuplicateLineUp",
-      "ctrl-alt-shift-j": "editor::DuplicateLineDown",
+      "ctrl-alt-shift-j": "editor::DuplicateLineDown"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown"
     }
   }
 ]
