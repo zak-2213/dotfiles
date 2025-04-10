@@ -44,3 +44,14 @@ vim.api.nvim_create_autocmd({ "BufNewFile" }, {
 		vim.cmd("0r " .. vim.fn.stdpath("config") .. "/templates/skeleton.ino")
 	end,
 })
+
+vim.filetype.add({
+	extension = {
+		fpp = "fpp",
+		fppi = "fpp",
+	},
+	pattern = {
+		[".*%.fpp"] = "fpp",
+		[".*%.fppi"] = "fpp",
+	},
+})

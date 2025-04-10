@@ -54,4 +54,5 @@ return require("packer").startup(function(use)
 			require("codecompanion").setup()
 		end,
 	})
+	use("sidebar-nvim/sidebar.nvim")
 end)

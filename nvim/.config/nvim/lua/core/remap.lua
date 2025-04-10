@@ -8,6 +8,8 @@ vim.keymap.set("n", "<C-k>", vim.cmd.vsplit)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+vim.keymap.set("n", "<C-a>", "gg<S-v>G")
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -23,9 +25,12 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 
 vim.keymap.set("n", "<C-/>", "I//<Esc>")
 vim.keymap.set("n", "<C-3>", "I#<Esc>")
+vim.keymap.set("v", "<C-/>", "_<C-v>I//")
 
 vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
+
+vim.keymap.set("i", "<C-BS>", "<Esc>dbs", { noremap = true })
 
 --vim.api.nvim_set_keymap('i', '"""', '"""<left><left><left>', { noremap = true })
 --vim.api.nvim_set_keymap('i', "'''", "'''<left><left><left>", { noremap = true })

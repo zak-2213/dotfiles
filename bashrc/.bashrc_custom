@@ -2,5 +2,8 @@ alias venv="source .venv/bin/activate"
 alias ai="/home/z/chat-ai-frontend/run.sh"
 alias screenshot="hyprshot -m window"
 alias build_docs="mkdocs build; python -m http.server --directory ./site"
+alias serial_monitor="minicom -D /dev/ttyUSB0 -b 9600"
+alias fprime-venv=". fprime-venv/bin/activate"
 eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/EDM115-newline.omp.json)"
 DISPLAY="" neofetch
+export PATH=~/.npm-global/bin:$PATH

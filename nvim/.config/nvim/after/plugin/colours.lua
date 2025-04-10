@@ -1,5 +1,5 @@
 function SetColours(colour)
-	colour = colour or "nightfox"
+	colour = colour or "tokyonight"
 	vim.cmd.colorscheme(colour)
 
 	vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
