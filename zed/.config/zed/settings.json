@@ -10,7 +10,7 @@
   "show_edit_predictions": true,
   "assistant": {
     "default_model": {
-      "provider": "anthropic",
+      "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"

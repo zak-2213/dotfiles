@@ -55,4 +55,7 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("sidebar-nvim/sidebar.nvim")
+	use("linux-cultist/venv-selector.nvim")
+	use("mfussenegger/nvim-dap-python")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 end)

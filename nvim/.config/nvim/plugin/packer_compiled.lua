@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/zak/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -155,6 +160,11 @@ _G.packer_plugins = {
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/home/zak/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
+    url = "https://github.com/mfussenegger/nvim-dap-python"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -220,6 +230,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["venv-selector.nvim"] = {
+    loaded = true,
+    path = "/home/zak/.local/share/nvim/site/pack/packer/start/venv-selector.nvim",
+    url = "https://github.com/linux-cultist/venv-selector.nvim"
   },
   ["verilog_systemverilog.vim"] = {
     loaded = true,
