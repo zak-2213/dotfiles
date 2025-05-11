@@ -21,6 +21,6 @@ require("codecompanion").setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>c", vim.cmd.CodeCompanion)
+vim.keymap.set("n", "<leader>co", vim.cmd.CodeCompanion)
 vim.keymap.set("n", "<leader>cc", vim.cmd.CodeCompanionChat)
 vim.keymap.set("n", "<leader>a", vim.cmd.CodeCompanionActions)
