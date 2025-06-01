@@ -91,12 +91,12 @@ vim.keymap.set("n", "<leader>y", '"+y')
 vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>Y", '"+Y')
 
-vim.keymap.set("n", "<leader>c", CommentLine)
-vim.keymap.set("v", "<leader>c", function()
+vim.keymap.set("n", "<leader>cm", CommentLine, { noremap = true })
+vim.keymap.set("v", "<leader>cm", function()
 	local comment = CommentLines() .. " "
 	-- Execute the visual mode commenting command
 	return "_<C-v>I" .. comment
-end, { expr = true })
+end, { expr = true, noremap = true })
 
 vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")

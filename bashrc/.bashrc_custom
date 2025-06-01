@@ -6,6 +6,7 @@ alias serial_monitor="minicom -D /dev/ttyUSB0 -b 9600"
 alias fprime-venv=". fprime-venv/bin/activate"
 alias connect_Study_N_Guest="sudo systemctl start netctl; sudo systemctl stop NetworkManager; sudo netctl start Study-N-Guest"
 alias connect_Zs22="sudo systemctl start netctl; sudo systemctl stop NetworkManager; sudo netctl start Zs22"
+alias vlime='sbcl --load ~/.local/share/nvim/site/pack/packer/start/vlime/lisp/start-vlime.lisp'
 DISPLAY="" neofetch --ascii ~/.config/neofetch/spiral_ascii
 export PATH=~/.npm-global/bin:$PATH
 export QT_QPA_PLATFORM=xcb

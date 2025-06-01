@@ -58,4 +58,10 @@ return require("packer").startup(function(use)
 	use("linux-cultist/venv-selector.nvim")
 	use("mfussenegger/nvim-dap-python")
 	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({
+		"vlime/vlime",
+		config = function()
+			rtp = "vim/"
+		end,
+	})
 end)
