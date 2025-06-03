@@ -64,4 +64,11 @@ return require("packer").startup(function(use)
 			rtp = "vim/"
 		end,
 	})
+	use({
+		"lervag/vimtex",
+		config = function()
+			-- VimTeX configuration goes here, e.g.
+			vim.g.vimtex_view_method = "zathura"
+		end,
+	})
 end)

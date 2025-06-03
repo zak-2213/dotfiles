@@ -103,8 +103,63 @@ vim.keymap.set("v", "<S-Tab>", "<gv")
 
 vim.keymap.set("i", "<C-BS>", "<Esc>dbs", { noremap = true })
 
---vim.api.nvim_set_keymap('i', '"""', '"""<left><left><left>', { noremap = true })
---vim.api.nvim_set_keymap('i', "'''", "'''<left><left><left>", { noremap = true })
-vim.api.nvim_set_keymap("i", "{", "{}<left>", { noremap = true })
---vim.api.nvim_set_keymap('i', '(', '()<left>', { noremap = true })
---vim.api.nvim_set_keymap('i', '[', '[]<left>', { noremap = true })
+-- Smart parenthesis mapping
+vim.api.nvim_set_keymap("i", "(", "()<Left>", { noremap = true, silent = true })
+
+vim.keymap.set("i", ")", function()
+	local line = vim.api.nvim_get_current_line()
+	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+	if line:sub(col, col) == ")" then
+		return "<Right>"
+	else
+		return ")"
+	end
+end, { expr = true, noremap = true })
+
+vim.api.nvim_set_keymap("i", "{", "{}<Left>", { noremap = true, silent = true })
+
+vim.keymap.set("i", "}", function()
+	local line = vim.api.nvim_get_current_line()
+	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+	if line:sub(col, col) == "}" then
+		return "<Right>"
+	else
+		return "}"
+	end
+end, { expr = true, noremap = true })
+
+vim.api.nvim_set_keymap("i", "[", "[]<Left>", { noremap = true, silent = true })
+
+vim.keymap.set("i", "]", function()
+	local line = vim.api.nvim_get_current_line()
+	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+	if line:sub(col, col) == "]" then
+		return "<Right>"
+	else
+		return "]"
+	end
+end, { expr = true, noremap = true })
+
+vim.api.nvim_set_keymap("i", '"', '""<Left>', { noremap = true, silent = true })
+
+vim.keymap.set("i", '"', function()
+	local line = vim.api.nvim_get_current_line()
+	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+	if line:sub(col, col) == '"' then
+		return "<Right>"
+	else
+		return '"'
+	end
+end, { expr = true, noremap = true })
+
+vim.api.nvim_set_keymap("i", "'", "''<Left>", { noremap = true, silent = true })
+
+vim.keymap.set("i", "'", function()
+	local line = vim.api.nvim_get_current_line()
+	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+	if line:sub(col, col) == "'" then
+		return "<Right>"
+	else
+		return "'"
+	end
+end, { expr = true, noremap = true })
