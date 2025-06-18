@@ -140,26 +140,51 @@ vim.keymap.set("i", "]", function()
 	end
 end, { expr = true, noremap = true })
 
-vim.api.nvim_set_keymap("i", '"', '""<Left>', { noremap = true, silent = true })
-
-vim.keymap.set("i", '"', function()
+vim.keymap.set("i", "<BS>", function()
+	local cursor = vim.api.nvim_win_get_cursor(0)
+	local row, col = cursor[1], cursor[2] -- row is 1-indexed, col is 0-indexed
 	local line = vim.api.nvim_get_current_line()
-	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
-	if line:sub(col, col) == '"' then
-		return "<Right>"
-	else
-		return '"'
+
+	-- Only proceed if we're not at the start of the line
+	if col > 0 then
+		local char_left = line:sub(col, col) -- Character to be deleted
+		local char_right = line:sub(col + 1, col + 1) -- Character immediately right of cursor
+
+		-- Define matching bracket pairs
+		local bracket_pairs = {
+			["("] = ")",
+			["["] = "]",
+			["{"] = "}",
+		}
+
+		-- Check if we're between matching brackets
+		if bracket_pairs[char_left] and bracket_pairs[char_left] == char_right then
+			return "<BS><Del>" -- Delete both brackets
+		end
 	end
+	return "<BS>" -- Default backspace behavior
 end, { expr = true, noremap = true })
 
-vim.api.nvim_set_keymap("i", "'", "''<Left>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("i", '"', '""<Left>', { noremap = true, silent = true })
 
-vim.keymap.set("i", "'", function()
-	local line = vim.api.nvim_get_current_line()
-	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
-	if line:sub(col, col) == "'" then
-		return "<Right>"
-	else
-		return "'"
-	end
-end, { expr = true, noremap = true })
+-- vim.keymap.set("i", '"', function()
+-- 	local line = vim.api.nvim_get_current_line()
+-- 	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+-- 	if line:sub(col, col) == '"' then
+-- 		return "<Right>"
+-- 	else
+-- 		return '"'
+-- 	end
+-- end, { expr = true, noremap = true })
+--
+-- vim.api.nvim_set_keymap("i", "'", "''<Left>", { noremap = true, silent = true })
+--
+-- vim.keymap.set("i", "'", function()
+-- 	local line = vim.api.nvim_get_current_line()
+-- 	local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+-- 	if line:sub(col, col) == "'" then
+-- 		return "<Right>"
+-- 	else
+-- 		return "'"
+-- 	end
+-- end, { expr = true, noremap = true })
