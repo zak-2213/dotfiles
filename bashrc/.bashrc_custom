@@ -11,3 +11,4 @@ DISPLAY="" neofetch --ascii ~/.config/neofetch/spiral_ascii
 export PATH=~/.npm-global/bin:$PATH
 export QT_QPA_PLATFORM=xcb
 eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/1_shell.omp.json)"
+eval "$(tmux new-session)"
