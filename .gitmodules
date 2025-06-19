@@ -1,0 +1,6 @@
+[submodule "suckless/suckless/dmenu"]
+	path = suckless/suckless/dmenu
+	url = git@github.com:zak-2213/dmenu.git
+[submodule "suckless/suckless/st"]
+	path = suckless/suckless/st
+	url = git@github.com:zak-2213/st.git
