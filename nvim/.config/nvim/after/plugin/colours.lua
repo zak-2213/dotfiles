@@ -1,5 +1,5 @@
 function SetColours(colour)
-	colour = colour or "catppuccin-frappe"
+	colour = colour or "gruvbox-material"
 	vim.cmd.colorscheme(colour)
 
 	-- Clear background for all relevant highlight groups

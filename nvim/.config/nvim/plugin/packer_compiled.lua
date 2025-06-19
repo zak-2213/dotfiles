@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/zak/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/home/zak/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/home/zak/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/home/zak/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/zak/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
+local package_path_str = "/home/zak/.cache/nvim/packer_hererocks/2.1.1748459687/share/lua/5.1/?.lua;/home/zak/.cache/nvim/packer_hererocks/2.1.1748459687/share/lua/5.1/?/init.lua;/home/zak/.cache/nvim/packer_hererocks/2.1.1748459687/lib/luarocks/rocks-5.1/?.lua;/home/zak/.cache/nvim/packer_hererocks/2.1.1748459687/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/zak/.cache/nvim/packer_hererocks/2.1.1748459687/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -124,6 +124,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zak/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "/home/zak/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -271,6 +276,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: vimtex
+time([[Config for vimtex]], true)
+try_loadstring("\27LJ\2\n<\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
+time([[Config for vimtex]], false)
 -- Config for: vlime
 time([[Config for vlime]], true)
 try_loadstring("\27LJ\2\n\28\0\0\1\0\2\0\3'\0\0\0007\0\1\0K\0\1\0\brtp\tvim/\0", "config", "vlime")
@@ -279,10 +288,6 @@ time([[Config for vlime]], false)
 time([[Config for codecompanion.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18codecompanion\frequire\0", "config", "codecompanion.nvim")
 time([[Config for codecompanion.nvim]], false)
--- Config for: vimtex
-time([[Config for vimtex]], true)
-try_loadstring("\27LJ\2\n<\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
-time([[Config for vimtex]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
